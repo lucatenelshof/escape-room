@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room Code</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        #clue { display: none; margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Voer de code in</h1>
+    <input type="text" id="codeInput" placeholder="Code hier">
+    <button onclick="checkCode()">Invoeren</button>
+    <p id="clue">Gefeliciteerd! De volgende hint is: <strong>zoek onder de tafel</strong></p>
+
+    <script>
+        function checkCode() {
+            const correctCode = "2688"; // Verander dit naar de gewenste code
+            const userCode = document.getElementById("codeInput").value;
+
+            if (userCode === correctCode) {
+                document.getElementById("clue").style.display = "block";
+            } else {
+                alert("Foute code! Probeer opnieuw.");
+            }
+        }
+    </script>
+</body>
+</html>
